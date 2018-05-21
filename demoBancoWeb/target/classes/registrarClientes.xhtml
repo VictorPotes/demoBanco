@@ -1,0 +1,107 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+
+<h:body>
+	<p:layout style="min-width:600px;min-height:600px;">
+		<p:layoutUnit position="west" resizable="false"
+			style="background-color: blue;">
+			<img
+				src="http://icons.iconarchive.com/icons/artua/dragon-soft/512/User-icon.png"
+				width="250" height="300" alt="User icon" title="User" />
+		</p:layoutUnit>
+		<p:layoutUnit header="Gestión de clientes" position="north"
+			style="background-color: blue;">
+
+			<p:panelGrid columns="7">
+				<p:button value="Crear cliente" icon="ui-icon-star">
+					<f:param name="productId" value="10" />
+				</p:button>
+				<p:button value="Modificar cliente" icon="ui-icon-star">
+					<f:param name="productId" value="10" />
+				</p:button>
+				<p:button value="Inactivar cliente" icon="ui-icon-star">
+					<f:param name="productId" value="10" />
+				</p:button>
+				<p:button value="Cuentas de cliente" icon="ui-icon-star">
+					<f:param name="productId" value="10" />
+				</p:button>
+				<p:button value="Mostrar clientes" icon="ui-icon-star">
+					<f:param name="productId" value="10" />
+				</p:button>
+				<p:button value="Consultar cliente" icon="ui-icon-star">
+					<f:param name="productId" value="10" />
+				</p:button>
+				<p:inputText />
+
+			</p:panelGrid>
+		</p:layoutUnit>
+
+		<p:layoutUnit header="Registrar cliente" position="center"
+			style="background-color: blue;">
+
+			<p:panelGrid columns="2">
+				<f:facet name="header">
+					<p:graphicImage name="demo/images/misc/kobe.png" />
+				</f:facet>
+
+				<h:outputText value="Id:" style="font-size:39px;" escape="false" />
+				<p:inputText />
+				<h:outputText value="Tipo de documento:" style="font-size:39px;"
+					escape="false" />
+				<p:autoComplete id="dd" dropdown="true" />
+				<h:outputText value="Nombre:" style="font-size:39px;" escape="false" />
+				<p:inputText />
+				<h:outputText value="Dirección:" style="font-size:39px;"
+					escape="false" />
+				<p:inputText />
+				<h:outputText value="Teléfono" style="font-size:39px;"
+					escape="false" />
+				<p:inputText />
+				<h:outputText value="Mail" style="font-size:39px;" escape="false" />
+				<p:inputText />
+			</p:panelGrid>
+
+		</p:layoutUnit>
+		<p:layoutUnit header="Clientes" position="south"
+			style="background-color: blue;">
+
+			<p:dataTable var="clientes" value="#{dtBasicView.clientes}">
+				<p:column headerText="Id">
+					<h:outputText value="#{clientes.id}" />
+				</p:column>
+
+				<p:column headerText="Tipo documento">
+					<h:outputText value="#{clientes.year}" />
+				</p:column>
+
+				<p:column headerText="Nombre">
+					<h:outputText value="#{clientes.brand}" />
+				</p:column>
+
+				<p:column headerText="Dirección">
+					<h:outputText value="#{clientes.color}" />
+				</p:column>
+
+				<p:column headerText="Teléfono">
+					<h:outputText value="#{clientes.color}" />
+				</p:column>
+
+				<p:column headerText="Mail">
+					<h:outputText value="#{clientes.color}" />
+				</p:column>
+
+				<p:column headerText="Activación">
+					<h:outputText value="#{clientes.color}" />
+				</p:column>
+			</p:dataTable>
+		</p:layoutUnit>
+
+	</p:layout>
+</h:body>
+</html>

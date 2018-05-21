@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="demoBanco" transaction-type="RESOURCE_LOCAL">
+		<class>co.edu.icesi.demobanco.modelo.Clientes</class>
+		<class>co.edu.icesi.demobanco.modelo.Consignaciones</class>
+		<class>co.edu.icesi.demobanco.modelo.ConsignacionesId</class>
+		<class>co.edu.icesi.demobanco.modelo.Cuentas</class>
+		<class>co.edu.icesi.demobanco.modelo.Retiros</class>
+		<class>co.edu.icesi.demobanco.modelo.RetirosId</class>
+		<class>co.edu.icesi.demobanco.modelo.TiposDocumentos</class>
+		<class>co.edu.icesi.demobanco.modelo.TiposUsuarios</class>
+		<class>co.edu.icesi.demobanco.modelo.Transferencias</class>
+		<class>co.edu.icesi.demobanco.modelo.TransferenciasId</class>
+		<class>co.edu.icesi.demobanco.modelo.Usuarios</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/demo"/>
+			<property name="javax.persistence.jdbc.user" value="postgres"/>
+			<property name="javax.persistence.jdbc.password" value="manzana23"/>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+		</properties>
+	</persistence-unit>
+</persistence>
