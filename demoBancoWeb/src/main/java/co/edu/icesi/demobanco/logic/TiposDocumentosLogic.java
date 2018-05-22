@@ -91,7 +91,7 @@ public class TiposDocumentosLogic implements ITiposDocumentosLogic {
 	public void delete(TiposDocumentos entity) throws Exception {
 		//Se valida que se ingrese un cliente
 		if(entity == null) {
-			throw new Exception("Debe ingresar un cliente");
+			throw new Exception("Debe ingresar un Tipo de documento");
 		}
 		
 		//Verifico que el clente no exista
